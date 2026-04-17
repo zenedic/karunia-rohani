@@ -8,7 +8,6 @@ if (!window.supabase) {
   throw new Error("Library Supabase tidak termuat. Cek tag <script> di index.html");
 }
 
-const { createClient } = window.supabase;
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // 2) Daftar karunia berdasarkan lembar evaluasi
