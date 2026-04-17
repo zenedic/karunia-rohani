@@ -1,7 +1,4 @@
 
-const SUPABASE_URL = "https://PROJECTANDA.supabase.co";
-const SUPABASE_ANON_KEY = "KEY_ANDA";
-
 if (!window.supabase) {
   throw new Error("Library Supabase belum termuat. Cek script di index.html");
 }
