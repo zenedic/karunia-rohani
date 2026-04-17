@@ -1,11 +1,3 @@
-
-if (!window.supabase) {
-  throw new Error("Library Supabase belum termuat. Cek script di index.html");
-}
-
-const { createClient } = window.supabase;
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
 // 1) Ganti dengan project Supabase Anda
 const SUPABASE_URL = "https://gpznwozgemdycswibgyo.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_Csx1klgelgJn5ZlAZuWy1A_9fAW35iX";
