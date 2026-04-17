@@ -5,7 +5,14 @@ import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 const SUPABASE_URL = "https://gpznwozgemdycswibgyo.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_Csx1klgelgJn5ZlAZuWy1A_9fAW35iX";
 
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+console.log("window.supabase =", window.supabase);
+
+if (!window.supabase) {
+  throw new Error("Library Supabase tidak termuat. Cek tag <script> di index.html");
+}
+
+const { createClient } = window.supabase;
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // 2) Daftar karunia berdasarkan lembar evaluasi
 const GIFT_NAMES = [
