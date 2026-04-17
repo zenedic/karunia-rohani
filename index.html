@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Self-Assessment Karunia Rohani</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>Self-Assessment Karunia Rohani</h1>
+      <p>
+        Isi dengan jujur. Tidak ada jawaban benar atau salah. Hasil ini membantu
+        melihat kecenderungan karunia rohani berdasarkan 90 pernyataan.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Data Pengisi</h2>
+      <form id="assessmentForm">
+        <div class="grid two">
+          <label>
+            Nama Lengkap
+            <input type="text" name="full_name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" />
+          </label>
+          <label>
+            No. WhatsApp
+            <input type="text" name="phone" />
+          </label>
+          <label>
+            Nama Gereja
+            <input type="text" name="church_name" />
+          </label>
+          <label>
+            Kelompok Usia
+            <select name="age_group">
+              <option value="">Pilih</option>
+              <option>Remaja</option>
+              <option>Pemuda</option>
+              <option>Dewasa</option>
+              <option>Lansia</option>
+            </select>
+          </label>
+        </div>
+
+        <h2>Panduan Penilaian</h2>
+        <div class="legend">
+          <span>1 = sangat tidak cocok</span>
+          <span>2 = biasanya salah</span>
+          <span>3 = netral</span>
+          <span>4 = biasanya benar</span>
+          <span>5 = sangat cocok</span>
+        </div>
+
+        <div id="questionsContainer"></div>
+
+        <label class="notes">
+          Catatan Tambahan
+          <textarea name="notes" rows="4" placeholder="Opsional"></textarea>
+        </label>
+
+        <button type="submit" id="submitBtn">Simpan Hasil</button>
+      </form>
+    </section>
+
+    <section class="card hidden" id="resultCard">
+      <h2>Hasil Anda</h2>
+      <p>Tiga karunia dengan skor tertinggi:</p>
+      <ol id="topGiftsList"></ol>
+      <div id="allTotals"></div>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
