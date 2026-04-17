@@ -2,12 +2,6 @@
 const SUPABASE_URL = "https://gpznwozgemdycswibgyo.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_Csx1klgelgJn5ZlAZuWy1A_9fAW35iX";
 
-console.log("window.supabase =", window.supabase);
-
-if (!window.supabase) {
-  throw new Error("Library Supabase tidak termuat. Cek tag <script> di index.html");
-}
-
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // 2) Daftar karunia berdasarkan lembar evaluasi
